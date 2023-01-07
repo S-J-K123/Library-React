@@ -8,7 +8,7 @@ import Rating from '../components/Rating';
         const Book = ({book}) => {
             const [img, setImg] = useState();
 
-            const mountedRef = useRef(false);
+            const mountedRef = useRef(true);
             
             useEffect(() => {
                 const image = new Image();
@@ -22,7 +22,7 @@ import Rating from '../components/Rating';
                 };
                 return () => {
                     // when the component mounts!
-                    mountedRef.current = true;
+                    mountedRef.current = false;
                 }
              })
 
